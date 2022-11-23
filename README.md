@@ -1,45 +1,51 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+## API Automation Tutorial
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+In this tutorial you are going to learn <b>How to Automate the REST API's in Java</b> using <b>RESTAssured Library</b>
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+The tech stack used for this tutorial are:
+1. **JAVA** as the programming language for writing test code
+2. **TestNg** as the framework
+3. **Gradle** as the build tool
+4. **IntelliJ** as the preferred IDE for writing java code.
 
----
+#### Getting Started
+Setup your machine.
+1. Install JDK 1.8
+2. Install IntelliJ (Community edition is fine)
+3. Install Gradle
 
-## Edit a file
+#### Cloning & Importing the Project
+1. Clone the project from ```git clone https://github.com/vinaykumarvvs/api-automation-tutorial.git```
+2. Import the project (api-automation-tutorial) in IntelliJ ```File -> New -> Project from Existing Sources -> Browse Project Location -> build.gradle```
+3. Now click on ```auto import -> Ok``` wait until the IntelliJ downloads all the dependencies
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
-
----
-
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+#### Running tests
+``Note:`` For 2nd & 3rd steps, you need to follow this way ```OpenTerminal/CMD -> cd <change-to-project-location>```
+1. You can run the tests directly from the IntelliJ, by right-clicking and **Run test**.
+2. For Linux/Mac users: ```gradle clean build runTests```
+3. For Windows users: ```gradlew clean build runTests```
 
 ---
 
-## Clone a repository
+## Tutorial Begins
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+### PetStore - Swagger
+Throughout this tutorial, I am going to use [PetStore-Swagger](http://petstore.swagger.io/). <b>PetStore - Swagger</b> is the open source project which has very good documentation with the various number of examples.
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+#### [Chapter 1](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter01/Chapter01.md) :: Send a GET Request and validate the Response
+1. **[Test-1](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter01/FirstChapterTests.java):** Send a get Request of an API and validate the body
+2. **[Test-2](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter01/FirstChapterTests.java):** Send a get Request of an API by passing the Query Parameters in the URL itself
+3. **[Test-3](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter01/FirstChapterTests.java):** Send a get Request of an API and retrieve the data from the body
+4. **[Test-4](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter01/FirstChapterTests.java):** Send a get Request of an API and store the Response
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+#### [Chapter 2](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter02/Chapter02.md) :: Abstracting the code
+1. **[Test-1](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter02/SecondChapterTests.java):** Abstracting the Requests for maintenance and readability
+
+#### [Chapter 3](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter03/Chapter03.md) :: POST Request creation and validating the Response Code
+1. **[Test-1](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter03/ThirdChapterTests.java):** Creating the POST Request and validating the Response Code
+
+#### [Chapter 4](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter04/Chapter04.md) :: POST Request creation and validating RequestBody & ResponseBody
+1. **[Test-1](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter04/FourthChapterTests.java):** Creating the POST Request and validating the RequestBody & ResponseBody
+
+#### [Chapter 5](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter05/Chapter05.md) :: Chaining the API's
+1. **[Test-1](https://github.com/vinaykumarvvs/api-automation-tutorial/tree/master/src/test/java/Chapters/Chapter05/FifthChapterTests.java):** Chaining Requests and validate Response Body
